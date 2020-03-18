@@ -26,10 +26,10 @@ class Chronometer {
   }
   
   resetClick() {
-    
+    this.currentTime = 0;
   }
 
   splitClick() {
-    // ... your code goes here
+    return this.twoDigitsNumber(this.getMinutes()) + ":" + this.twoDigitsNumber(this.getSeconds());
   }
 }
