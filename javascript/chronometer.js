@@ -9,22 +9,26 @@ class Chronometer {
   }
 
   getMinutes() {
-    return Math.floor(this.currentTime / 60)
+    return Math.floor(this.currentTime / 60);
   }
 
   getSeconds() {
-    // ... your code goes here
+    return this.currentTime % 60;
+  }
+
+  twoDigitsNumber(value) {
+    // return value < 10 ? `0${value}` : `${value}`
+    return value < 10 ? "0" + value.toString() : value.toString();
+  }
+
+  stopClick() {
+    clearInterval(this.intervalId);
   }
   
-  twoDigitsNumber() {
-    // ... your code goes here
-  }
-  stopClick() {
-    // ... your code goes here
-  }
   resetClick() {
-    // ... your code goes here
+    
   }
+
   splitClick() {
     // ... your code goes here
   }
